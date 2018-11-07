@@ -1,0 +1,80 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding-top: 50px;
+}
+
+.buttons {
+
+}
+
+.button {
+	display: inline-block;
+	text-align: center;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	background-color: #bbbbbb;
+	color: #555555;
+	cursor: pointer;
+	font-size: 20px;
+    width: calc(50% - 2px);
+}
+
+.button:hover {
+	background-color: #999999;
+	color: #dddddd;
+}
+
+.button:active {
+	background-color: #555555;
+	color: #dddddd;
+}
+
+#background {
+    background-color: #eeeeee;
+    border: 2px solid #aaaaaa;
+    position: relative;
+    text-align: center;
+    width: 1002px;
+    height: 702px;
+}
+
+.box {
+    background-color: #dddddd;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #aaaaaa;
+}
+
+.box.active {
+    background-color: #aaaaaa;
+
+    animation-name: activate;
+    animation-duration: 800ms;
+}
+
+.box.inactive {
+    animation-name: deactivate;
+    animation-duration: 800ms;
+}
+
+@keyframes activate {
+    from {
+        background-color: #dddddd;
+    }
+    to {
+        background-color: #aaaaaa;
+    }
+}
+
+@keyframes deactivate {
+    from {
+        background-color: #aaaaaa;
+    }
+    to {
+        background-color: #dddddd;
+    }
+}
